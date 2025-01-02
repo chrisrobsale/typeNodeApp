@@ -1,0 +1,10 @@
+# Node.js dependencies
+node_modules/
+
+# Editor directories and files
+.idea
+.vscode
+
+# TypeScript
+dist/
+*.tsbuildinfo
