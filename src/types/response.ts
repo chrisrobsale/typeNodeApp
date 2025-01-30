@@ -1,10 +1,15 @@
-export interface User {
+export interface UserResponse {
   id: number;
   email: string;
   username: string;
 }
 
-export interface UserList {
+export interface CommonResponse {
   message: string;
-  data: Array<object>;
+  data: any[];
+}
+
+export interface CategoryResponse {
+  id: number;
+  name: string;
 }

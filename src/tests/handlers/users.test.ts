@@ -1,6 +1,6 @@
 import request from "supertest";
 import app from "../../index";
-import { User } from "../../types/response";
+import { UserResponse } from "../../types/response";
 
 describe("GET /api/users", () => {
   it("should return a UserList", async () => {
@@ -21,7 +21,7 @@ describe("GET /api/users", () => {
     expect(response.body.data).toBeInstanceOf(Array);
 
     const userProperties = ["id", "email", "username"];
-    response.body.data.forEach((user: User) => {
+    response.body.data.forEach((user: UserResponse) => {
       userProperties.forEach((property) => {
         expect(user).toHaveProperty(property);
       });

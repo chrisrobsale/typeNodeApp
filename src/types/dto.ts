@@ -7,3 +7,7 @@ export interface CreateUserDto {
 export interface CreateCategoryDto {
   name: string;
 }
+
+export interface CreateProductDto {
+  name: string;
+}

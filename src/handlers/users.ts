@@ -1,9 +1,9 @@
 import { Request, Response } from "express-serve-static-core";
-import { CreateUserDto } from "../dtos/CreateUser.dto";
+import { CreateUserDto } from "../types/dto";
 import { CreateUserQueryParams } from "../types/query-param";
-import { User, UserList } from "../types/response";
+import { UserResponse, CommonResponse } from "../types/response";
 
-export function getUsers(req: Request, res: Response<UserList>) {
+export function getUsers(req: Request, res: Response<CommonResponse>) {
   console.log("Start -- getUsers");
   res.status(200).send({
     message: "Successfully fetched users",
@@ -22,7 +22,7 @@ export function getUsersById(req: Request, res: Response) {
 
 export function createUser(
   req: Request<{}, {}, CreateUserDto, CreateUserQueryParams>,
-  res: Response<User>
+  res: Response<UserResponse>
 ) {
   res.status(201).send({
     id: 1,
